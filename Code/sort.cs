@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 
 /**
- * æ°´ä»™èŠ±æ•°
- * ç™¾ä½çš„ç«‹æ–¹ + åä½çš„ç«‹æ–¹ + ä¸ªä½çš„ç«‹æ–¹ == å½“å‰æ•°å­
- * ç™¾ä½ / 100
- * åä½ %100/10
- * ä¸ªä½ %10
- */ 
+ * Ã°ÅİÅÅĞò
+ */
 namespace ConsoleApplication1
 {
     public enum sex
@@ -21,7 +17,7 @@ namespace ConsoleApplication1
     }
     public struct stdent
     {
-        public string _name; //ä¸åŠ publicä¸‹é¢ç‚¹ä¸å‡ºæ¥ï¼Œæƒé™ä¸å¤Ÿ
+        public string _name; //²»¼ÓpublicÏÂÃæµã²»³öÀ´£¬È¨ÏŞ²»¹»
         public sex _sh;
         public int _eag;
     };
@@ -29,11 +25,11 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-           
+
             int[] num = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
-            for (int i = 0; i < num.Length-1; i++)
+            for (int i = 0; i < num.Length - 1; i++)
             {
-                for (int j = 0; j < num.Length-1-i; j++)
+                for (int j = 0; j < num.Length - 1 - i; j++)
                 {
                     if (num[j] > num[j + 1])
                     {
@@ -42,7 +38,7 @@ namespace ConsoleApplication1
                         num[j] = num[j] - num[j + 1];
                     }
                 }
-                    
+
             }
 
             for (int i = 0; i < num.Length; i++)
