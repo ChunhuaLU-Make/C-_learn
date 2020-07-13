@@ -5,51 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-/**
- * 水仙花数
- * 百位的立方 + 十位的立方 + 个位的立方 == 当前数子
- * 百位 / 100
- * 十位 %100/10
- * 个位 %10
- */ 
 namespace ConsoleApplication1
 {
-    public enum sex
-    {
-        man,
-        woman
-    }
-    public struct stdent
-    {
-        public string _name; //不加public下面点不出来，权限不够
-        public sex _sh;
-        public int _eag;
-    };
     class Program
     {
         static void Main(string[] args)
         {
-           
-            int[] num = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
-            for (int i = 0; i < num.Length-1; i++)
-            {
-                for (int j = 0; j < num.Length-1-i; j++)
-                {
-                    if (num[j] > num[j + 1])
-                    {
-                        num[j] = num[j] + num[j + 1];
-                        num[j + 1] = num[j] - num[j + 1];
-                        num[j] = num[j] - num[j + 1];
-                    }
-                }
-                    
-            }
+            int[] num = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            
+            Console.WriteLine("total:{0}", InputNum(num));
+        }
 
-            for (int i = 0; i < num.Length; i++)
+        /// <summary>
+        /// 保证能接受一个数字
+        /// </summary>
+        /// <param name="str">最开始传入的数字</param>
+        /// <returns>返回接收到的数字</returns>
+        public static int InputNum(int[] array)
+        {
+            int total = 0;
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.Write(num[i]);
+               total += array[i];
             }
-            Console.WriteLine();
+            return total;
         }
     }
 }
