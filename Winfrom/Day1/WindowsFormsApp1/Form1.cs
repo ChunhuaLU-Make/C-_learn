@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
             Time.Text = DateTime.Now.ToString();  //获取当前时间
 
               //定时播放音乐
-            if (DateTime.Now.Hour == 23 && DateTime.Now.Minute == 13 && DateTime.Now.Second == 00)
+            if (DateTime.Now.Hour == 11 && DateTime.Now.Minute == 5 && DateTime.Now.Second == 00)
             {
                 //播放音乐
                 SoundPlayer Music = new SoundPlayer();
